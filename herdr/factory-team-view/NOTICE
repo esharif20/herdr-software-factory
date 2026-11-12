@@ -1,0 +1,4 @@
+This folder changes the Factory mod by munza (https://github.com/munza/herdr-mods, Apache-2.0,
+commit 6e2ffe050ea69d84056ccfa595a432c884de3f43).
+Changed: main.js, views/ui.js, views/workflows.js, actions/commands.js (see factory.patch).
+Added: views/team.js, views/skills.js, run/skills.js, run/skills.test.mjs.

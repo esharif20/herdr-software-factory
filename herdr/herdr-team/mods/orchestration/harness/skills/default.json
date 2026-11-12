@@ -1,0 +1,17 @@
+{
+  "groups": [
+    { "id": "always", "title": "Always", "when": "every lane", "skills": ["code-structure", "unslop"] },
+    { "id": "frontend", "title": "Frontend core", "when": "any lane that touches UI", "skills": ["ui-ux-pro-max", "shadcn", "impeccable", "design-taste-frontend", "design-md"] },
+    { "id": "polish", "title": "Frontend polish", "when": "new interactive components", "skills": ["emil-design-eng", "apple-design"] },
+    { "id": "landing", "title": "Landing pages", "when": "public-facing pages", "skills": ["design-taste-frontend", "frontend-design:frontend-design"] },
+    { "id": "motion", "title": "Motion", "when": "animation, drag, transitions", "skills": ["animate", "choreograph", "gestures"] },
+    { "id": "mobile", "title": "Mobile", "when": "phone web, iOS, React Native", "skills": ["mobile-native", "write-swift", "animate-expo"] },
+    { "id": "ui-proof", "title": "UI proof", "when": "a UI lane's last issue, UI Polisher", "skills": ["break-ui", "before-and-after"] },
+    { "id": "backend", "title": "Backend and API", "when": "endpoints, parsers, algorithms", "skills": ["tdd", "codebase-design"] },
+    { "id": "bugs", "title": "Bugs", "when": "bug-fix issues", "skills": ["diagnosing-bugs", "evidence-driven-testing"] },
+    { "id": "money", "title": "Money", "when": "payments", "skills": ["stripe-best-practices", "upgrade-stripe"] },
+    { "id": "ai", "title": "AI features", "when": "LLM features", "skills": ["vercel-plugin:ai-sdk"] },
+    { "id": "lead", "title": "Lead only", "when": "planning", "skills": ["new-feature", "domain-modeling", "codebase-design", "grilling"] },
+    { "id": "review", "title": "Reviews", "when": "the Lead's review subagents", "skills": ["code-review"] }
+  ]
+}
