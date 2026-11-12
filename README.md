@@ -32,7 +32,7 @@ flowchart LR
 
 > Same problem, same brief: the team finishes sooner than a solo Opus session (which may use its own subagents), matches or beats it on hidden tests, and any extra cost buys proportionally more speed.
 
-Speed and quality rank equally first. Cost comes second: at most 15–20% above solo, and each 1% of extra cost must cut wall time by at least 2%.
+Speed and quality rank equally first. Cost comes second: at most 15% above solo (a hard cap), and each 1% of extra cost must cut wall time by at least 2%.
 
 ## Read the posts
 
@@ -44,6 +44,7 @@ Speed and quality rank equally first. Cost comes second: at most 15–20% above 
 | 4 | [Post-mortem: the run that stalled](docs/04-bench10-postmortem.md) | A real-world run that lost 30 minutes to the harness, and why |
 | 5 | [Where it goes next](docs/05-roadmap.md) | The harness rebuild, swarm ideas, making it reproducible |
 | 6 | [Builders, workers and parallelism](docs/06-builders-workers-parallelism.md) | How builders and their workers split the work, why warm workers are cheaper, where the speed comes from, and how the swarm features fit in |
+| 7 | [Speed, quality and cost](docs/07-speed-quality-cost.md) | How each is protected, context engineering, what builders do differently, workers vs plain subagents, and where Graphify fits |
 
 ## Status
 

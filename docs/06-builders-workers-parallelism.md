@@ -159,7 +159,7 @@ More builders and workers are not always faster: every new session costs about a
 | Milestone 2 needs milestone 1 merged | Milestone by milestone, with parallel area builders inside each |
 | One area holds most of the work | Fewer builders, more workers each |
 
-**Cost rule:** the team may cost up to 15–20% more than one solo session, and only if that buys speed. Each 1% of extra cost must cut wall time by at least 2%, so a run costing 15% more must be at least 30% faster.
+**Cost rule:** the team may cost at most 15% more than one solo session (a hard cap), and only if that buys speed. Each 1% of extra cost must cut wall time by at least 2%, so a run costing 15% more must be at least 30% faster.
 
 ## How the swarm features fit in
 
