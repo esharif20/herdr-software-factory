@@ -9,7 +9,7 @@ Everything in [post 4](04-bench10-postmortem.md)'s fix table, plus:
 - **The planner hands over one line.** "Plan ready: plan.md, 3 milestones, 20 tickets, 3 lanes proposed." The lead reads headings, not the brief.
 - **Reviews, UI polish and retries kept intact**, each with a test.
 
-Then bench10 runs again. The bar: the team beats solo's 19:19 at the same hidden-test score, and costs less.
+Then bench10 runs again. The bar: the team beats solo's 19:19 at the same hidden-test score, within the cost-for-speed rule.
 
 ## Built: four ideas borrowed from swarms (see [post 6](06-builders-workers-parallelism.md))
 

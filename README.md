@@ -1,6 +1,6 @@
 # Herdr Software Factory
 
-A team of AI coding agents, run inside Herdr, that takes a software problem, plans it into milestones and tickets, and builds it **faster than one top-tier model working alone, at the same or better quality, for slightly less money**.
+A team of AI coding agents, run inside Herdr, that takes a software problem, plans it into milestones and tickets, and builds it **faster than one top-tier model working alone, at the same or better quality, for about the same money**.
 
 This repo is a public build log: what we are trying, why, how it works, what the measurements say, and what broke along the way. The code will follow once the design settles.
 
@@ -21,9 +21,9 @@ flowchart LR
 
 ## The goal in one line
 
-> Same problem, same brief: the team finishes sooner than a solo Opus session (which may use its own subagents), matches or beats it on hidden tests, and costs 5–10% less.
+> Same problem, same brief: the team finishes sooner than a solo Opus session (which may use its own subagents), matches or beats it on hidden tests, and any extra cost buys proportionally more speed.
 
-Speed and quality rank equally first. Cost comes second, but the team must not cost more than a few percent above solo.
+Speed and quality rank equally first. Cost comes second: at most 15–20% above solo, and each 1% of extra cost must cut wall time by at least 2%.
 
 ## Read the posts
 

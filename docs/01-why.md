@@ -44,7 +44,7 @@ Wall time for one agent is roughly the sum of every ticket. For a team it is the
 |---|---|
 | Speed | Finish sooner than a solo Opus session that may use its own subagents |
 | Quality | Equal or better on hidden tests the agents never see, plus code a person is glad to read |
-| Cost | 5–10% cheaper than solo; a few percent more is the absolute ceiling |
+| Cost | At most 15–20% above solo, and only if it buys speed: each 1% of extra cost must cut wall time by at least 2%. Cheaper is a bonus |
 | Flexibility | Works on any real job: new features, bug fixes, refactors, other languages, not tuned to one benchmark |
 | Autonomy | Runs from brief to merged code on its own; problems go to the lead, which decides, and the run continues |
 | Visibility | Every agent is a visible, steerable terminal; the plan, tickets, costs and progress show live in the UI |
