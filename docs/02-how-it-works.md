@@ -14,6 +14,8 @@
 
 **Opus defines, Sonnet executes.** The planner and the factories write the exact briefs; Sonnet Workers, given those briefs, build them well and at a fraction of the price.
 
+For a closer look at builders, workers and how the work runs in parallel, see [post 6](06-builders-workers-parallelism.md).
+
 ## The flow
 
 ```mermaid

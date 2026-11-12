@@ -34,6 +34,7 @@ Speed and quality rank equally first. Cost comes second, but the team must not c
 | 3 | [What we have done so far](docs/03-progress.md) | Ten benchmarks, the numbers, what each one taught us |
 | 4 | [Post-mortem: the run that stalled](docs/04-bench10-postmortem.md) | A real-world run that lost 30 minutes to the harness, and why |
 | 5 | [Where it goes next](docs/05-roadmap.md) | The harness rebuild, swarm ideas, making it reproducible |
+| 6 | [Builders, workers and parallelism](docs/06-builders-workers-parallelism.md) | How builders and their workers split the work, why warm workers are cheaper, where the speed comes from, and how the swarm features fit in |
 
 ## Status
 
@@ -42,7 +43,7 @@ Speed and quality rank equally first. Cost comes second, but the team must not c
 | Benchmarks run | 10 (bench1–bench10) |
 | Best result so far | bench9: team 19–64% faster than solo across four runs, 89/89 hidden tests on both sides |
 | Latest | bench10, the first real-world-style run (existing repo, product brief, mid-run change request): solo won; the team stalled on harness faults |
-| Now | Harness rebuilt so no check can silently stop work (58 harness tests); next, swarm features and a bench10 rerun |
+| Now | Harness rebuilt so no check can silently stop work, plus swarm features (64 harness tests); next, a bench10 rerun |
 
 ## Built on
 

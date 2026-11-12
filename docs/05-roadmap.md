@@ -11,7 +11,7 @@ Everything in [post 4](04-bench10-postmortem.md)'s fix table, plus:
 
 Then bench10 runs again. The bar: the team beats solo's 19:19 at the same hidden-test score, and costs less.
 
-## Next: four ideas borrowed from swarms
+## Built: four ideas borrowed from swarms (see [post 6](06-builders-workers-parallelism.md))
 
 The team stays a hierarchy (planner → lead → builders → workers) because that keeps contexts small and decisions accountable. But four swarm ideas fit:
 
@@ -31,7 +31,7 @@ flowchart LR
 3. **Elastic scaling**: start Workers when ready tickets pile up and memory allows; stop idle ones at once.
 4. **Racing a hard ticket**: for a hard ticket on the longest chain only, two Sonnet Workers try in parallel and the first to pass wins.
 
-Each is measured on its own, so we know what actually helps.
+They are in the harness now, each behind a setting. The bench10 rerun measures whether they earn their keep.
 
 ## Later: make it reproducible
 
