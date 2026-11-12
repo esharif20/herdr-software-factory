@@ -54,7 +54,17 @@ On bench11 (161 KB of source), having the graph did not make planning lighter. T
 
 So the graph now does the job the Lead was spending those tokens on. `codemap.mjs` turns `graph.json` into `.tsf/codemap.md`: each file's functions with line numbers, grouped by community, and the hub files that several communities use. On bench11 that is 7 KB, about 1.8k tokens, for 77 files. The Lead copies its code map from it, takes the communities as a first draft of lanes, and gives each hub file one owner. Builders read it instead of exploring. It is built before the Lead starts, for repos over 50 KB of source.
 
-CODEMAP_RESULT
+Measured on bench11, three runs with the same brief:
+
+| | No graph | Graph, Lead still reads files | Code map |
+|---|---|---|---|
+| Lead context when builders start | 77k | 119k | 84k |
+| Lead cost | $3.10 | $4.56 | $4.13 |
+| Time vs solo | −36% | −45% | −41% |
+| Cost vs solo | −24% | −7% | −19% |
+| Hidden tests (of 172) | 172 | 170 | 170 |
+
+The code map took back most of what the graph run lost, though the Lead still read a few whole files (about 25k characters) and, since this version, also reads the tsf skill (about 5k tokens). The runs vary in more than the graph: the last two put three or four lanes on Opus, so the cost and time differences are not the graph's alone.
 
 ## Install
 
