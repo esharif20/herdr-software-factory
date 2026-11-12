@@ -19,6 +19,7 @@ We want the same thing with agents:
 - **Check everything automatically.** Tests, reviews and UI polish run without a human in the loop, and only real decisions reach the lead.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'-apple-system, Segoe UI, Helvetica, sans-serif','fontSize':'15px','lineColor':'#94A3B8','primaryColor':'#EDE9FE','primaryBorderColor':'#7C3AED','primaryTextColor':'#2E1065','secondaryColor':'#F1F5F9','tertiaryColor':'#DCFCE7','clusterBkg':'#FAFAFA','clusterBorder':'#CBD5E1','noteBkgColor':'#FEF3C7','noteBorderColor':'#D97706','actorBkg':'#EDE9FE','actorBorder':'#7C3AED','git0':'#7C3AED','git1':'#0EA5E9','git2':'#16A34A','git3':'#D97706'}}}%%
 flowchart TB
     subgraph Solo["One agent"]
         direction LR

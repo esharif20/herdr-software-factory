@@ -19,6 +19,7 @@ For a closer look at builders, workers and how the work runs in parallel, see [p
 ## The flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'-apple-system, Segoe UI, Helvetica, sans-serif','fontSize':'15px','lineColor':'#94A3B8','primaryColor':'#EDE9FE','primaryBorderColor':'#7C3AED','primaryTextColor':'#2E1065','secondaryColor':'#F1F5F9','tertiaryColor':'#DCFCE7','clusterBkg':'#FAFAFA','clusterBorder':'#CBD5E1','noteBkgColor':'#FEF3C7','noteBorderColor':'#D97706','actorBkg':'#EDE9FE','actorBorder':'#7C3AED','git0':'#7C3AED','git1':'#0EA5E9','git2':'#16A34A','git3':'#D97706'}}}%%
 sequenceDiagram
     actor P as Person
     participant PL as Planner
@@ -56,12 +57,19 @@ sequenceDiagram
 The lead picks the smallest team that is fastest for this job, from the plan's milestones:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'-apple-system, Segoe UI, Helvetica, sans-serif','fontSize':'15px','lineColor':'#94A3B8','primaryColor':'#EDE9FE','primaryBorderColor':'#7C3AED','primaryTextColor':'#2E1065','secondaryColor':'#F1F5F9','tertiaryColor':'#DCFCE7','clusterBkg':'#FAFAFA','clusterBorder':'#CBD5E1','noteBkgColor':'#FEF3C7','noteBorderColor':'#D97706','actorBkg':'#EDE9FE','actorBorder':'#7C3AED','git0':'#7C3AED','git1':'#0EA5E9','git2':'#16A34A','git3':'#D97706'}}}%%
 flowchart TB
     Q{How do the milestones<br/>and areas depend<br/>on each other?}
     Q -->|small or tightly coupled| A[One builder,<br/>1–2 warm Workers]
     Q -->|milestones independent| B[One builder per milestone,<br/>in parallel]
     Q -->|M2 needs M1 merged| C[Milestone by milestone,<br/>parallel area builders inside each]
     Q -->|one area holds most work| D[Fewer builders,<br/>more Workers each]
+    class Q check
+    class A,B,C,D ai
+    classDef ai fill:#EDE9FE,stroke:#7C3AED,color:#2E1065,stroke-width:2px
+    classDef code fill:#F1F5F9,stroke:#64748B,color:#0F172A,stroke-width:2px,stroke-dasharray:5 4
+    classDef check fill:#DCFCE7,stroke:#16A34A,color:#052E16,stroke-width:2px
+    classDef person fill:#FEF3C7,stroke:#D97706,color:#451A03,stroke-width:2px
 ```
 
 Up to five builders, limited by free memory. A builder or Worker is added only where it shortens the longest chain: each fresh session costs about a minute and some dollars of re-reading the code.
@@ -71,6 +79,7 @@ Up to five builders, limited by free memory. A builder or Worker is added only w
 Each builder's lane runs in its **own git worktree on its own branch**, so lanes never see each other's half-written files.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'-apple-system, Segoe UI, Helvetica, sans-serif','fontSize':'15px','lineColor':'#94A3B8','primaryColor':'#EDE9FE','primaryBorderColor':'#7C3AED','primaryTextColor':'#2E1065','secondaryColor':'#F1F5F9','tertiaryColor':'#DCFCE7','clusterBkg':'#FAFAFA','clusterBorder':'#CBD5E1','noteBkgColor':'#FEF3C7','noteBorderColor':'#D97706','actorBkg':'#EDE9FE','actorBorder':'#7C3AED','git0':'#7C3AED','git1':'#0EA5E9','git2':'#16A34A','git3':'#D97706'}}}%%
 gitGraph
     commit id: "v1"
     branch lane-money
@@ -100,6 +109,7 @@ gitGraph
 The repetitive part, starting Workers, waiting, testing, retrying, is **plain code** (`batch.mjs`), not an agent. It spends no tokens, which is a big reason the team can cost less than solo.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'-apple-system, Segoe UI, Helvetica, sans-serif','fontSize':'15px','lineColor':'#94A3B8','primaryColor':'#EDE9FE','primaryBorderColor':'#7C3AED','primaryTextColor':'#2E1065','secondaryColor':'#F1F5F9','tertiaryColor':'#DCFCE7','clusterBkg':'#FAFAFA','clusterBorder':'#CBD5E1','noteBkgColor':'#FEF3C7','noteBorderColor':'#D97706','actorBkg':'#EDE9FE','actorBorder':'#7C3AED','git0':'#7C3AED','git1':'#0EA5E9','git2':'#16A34A','git3':'#D97706'}}}%%
 stateDiagram-v2
     [*] --> waiting: deps not done
     waiting --> building: deps done, capacity free

@@ -16,6 +16,7 @@ Then bench10 runs again. The bar: the team beats solo's 19:19 at the same hidden
 The team stays a hierarchy (planner → lead → builders → workers) because that keeps contexts small and decisions accountable. But four swarm ideas fit:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'-apple-system, Segoe UI, Helvetica, sans-serif','fontSize':'15px','lineColor':'#94A3B8','primaryColor':'#EDE9FE','primaryBorderColor':'#7C3AED','primaryTextColor':'#2E1065','secondaryColor':'#F1F5F9','tertiaryColor':'#DCFCE7','clusterBkg':'#FAFAFA','clusterBorder':'#CBD5E1','noteBkgColor':'#FEF3C7','noteBorderColor':'#D97706','actorBkg':'#EDE9FE','actorBorder':'#7C3AED','git0':'#7C3AED','git1':'#0EA5E9','git2':'#16A34A','git3':'#D97706'}}}%%
 flowchart LR
     subgraph Lanes
         A[Lane A<br/>idle] -. takes ready ticket .-> B[Lane B<br/>queue: T-7, T-8]
@@ -38,6 +39,7 @@ They are in the harness now, each behind a setting. The bench10 rerun measures w
 The aim is that anyone with Herdr and Claude Code can install the factory and run it on their own project:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'-apple-system, Segoe UI, Helvetica, sans-serif','fontSize':'15px','lineColor':'#94A3B8','primaryColor':'#EDE9FE','primaryBorderColor':'#7C3AED','primaryTextColor':'#2E1065','secondaryColor':'#F1F5F9','tertiaryColor':'#DCFCE7','clusterBkg':'#FAFAFA','clusterBorder':'#CBD5E1','noteBkgColor':'#FEF3C7','noteBorderColor':'#D97706','actorBkg':'#EDE9FE','actorBorder':'#7C3AED','git0':'#7C3AED','git1':'#0EA5E9','git2':'#16A34A','git3':'#D97706'}}}%%
 flowchart LR
     I[install script] --> M[Herdr mods<br/>Ops panel · Team view]
     I --> H[harness<br/>batch loop · gate · tickets · capacity]

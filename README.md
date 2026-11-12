@@ -5,6 +5,7 @@ A team of AI coding agents, run inside Herdr, that takes a software problem, pla
 This repo is a public build log: what we are trying, why, how it works, what the measurements say, and what broke along the way. The code will follow once the design settles.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'-apple-system, Segoe UI, Helvetica, sans-serif','fontSize':'15px','lineColor':'#94A3B8','primaryColor':'#EDE9FE','primaryBorderColor':'#7C3AED','primaryTextColor':'#2E1065','secondaryColor':'#F1F5F9','tertiaryColor':'#DCFCE7','clusterBkg':'#FAFAFA','clusterBorder':'#CBD5E1','noteBkgColor':'#FEF3C7','noteBorderColor':'#D97706','actorBkg':'#EDE9FE','actorBorder':'#7C3AED','git0':'#7C3AED','git1':'#0EA5E9','git2':'#16A34A','git3':'#D97706'}}}%%
 flowchart LR
     P([Person]) <--> PL[Planner<br/>Opus]
     PL -- plan.md --> L[Lead<br/>Opus]
@@ -14,9 +15,17 @@ flowchart LR
     F1 --> W1[Workers<br/>Sonnet]
     F2 --> W2[Workers<br/>Sonnet]
     F3 --> W3[Workers<br/>Sonnet / Opus]
-    W1 & W2 & W3 --> Q{Checks<br/>tests · review · UI polish}
+    W1 & W2 & W3 --> Q{{Checks<br/>tests · review · UI polish}}
     Q -- held --> L
     Q -- green --> M[(main)]
+    class P person
+    class PL,L,F1,F2,F3,W1,W2,W3 ai
+    class Q check
+    class M code
+    classDef ai fill:#EDE9FE,stroke:#7C3AED,color:#2E1065,stroke-width:2px
+    classDef code fill:#F1F5F9,stroke:#64748B,color:#0F172A,stroke-width:2px,stroke-dasharray:5 4
+    classDef check fill:#DCFCE7,stroke:#16A34A,color:#052E16,stroke-width:2px
+    classDef person fill:#FEF3C7,stroke:#D97706,color:#451A03,stroke-width:2px
 ```
 
 ## The goal in one line

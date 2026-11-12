@@ -14,6 +14,7 @@ Then we compare:
 - **Quality**: a hidden test suite neither side ever sees, plus each side's own adversarial tests run against the other side's build, plus a person reading both apps.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'-apple-system, Segoe UI, Helvetica, sans-serif','fontSize':'15px','lineColor':'#94A3B8','primaryColor':'#EDE9FE','primaryBorderColor':'#7C3AED','primaryTextColor':'#2E1065','secondaryColor':'#F1F5F9','tertiaryColor':'#DCFCE7','clusterBkg':'#FAFAFA','clusterBorder':'#CBD5E1','noteBkgColor':'#FEF3C7','noteBorderColor':'#D97706','actorBkg':'#EDE9FE','actorBorder':'#7C3AED','git0':'#7C3AED','git1':'#0EA5E9','git2':'#16A34A','git3':'#D97706'}}}%%
 flowchart LR
     K[Benchmark kit<br/>brief · hidden tests · reference build] --> S[Solo Opus]
     K --> T[Team]
