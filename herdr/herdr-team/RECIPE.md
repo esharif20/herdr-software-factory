@@ -37,7 +37,7 @@ A team of Claude Code sessions in one Herdr space. You press Start team and a Le
   - `lanes/land.sh`: merges one ready lane to main with `--no-ff`, runs tests, undoes on red.
   - `lanes/finish.sh`: runs the full test once and checks DONE.md commits are on main; prunes lanes.
   - `skills/skills.mjs`: which skills each lane loads, from `~/.config/herdr-app/data/orchestration/skills.json` (seeded by `default.json`).
-  - `graph/auto.sh`: builds a Graphify code graph when `graphify` is on PATH and source is over 400 KB.
+  - `graph/auto.sh`: builds a Graphify code graph when `graphify` is on PATH and source is over 50 KB, then writes `.tsf/codemap.md` with `codemap.mjs`: each file's functions with line numbers by community, and the hub files.
   - `capacity/capacity.sh`: prints how many more Workers fit in free memory (reserve 1536 MB, 400 MB each, max 8).
   - `batch/batch.mjs`: runs a `.tsf/batches/<id>.tsv` of tickets as Workers in a lane worktree; `LEAD-BATCH.md` is its Lead guide; `*-stub` files are test doubles.
   - `metrics/meter.mjs`: per-session cost and time from `~/.claude/projects` transcripts, read only.

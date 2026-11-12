@@ -11,7 +11,7 @@ If the person typed `/tsf <subcommand>`, read `references/commands.md` instead.
 
 ## 1. Look before you split
 
-- **With `graphify-out/GRAPH_REPORT.md`** (built in code before you start, for repos over about 400 KB of source): take the code map from it, since it lists communities, god nodes and files. Ask `GRAPHIFY_QUERY_LOG_DISABLE=1 graphify explain "<name>"` about the modules the issues touch. Open a file only where the graph falls short, such as an exact signature or a line number for the contract. Reading files to rebuild what the graph already says is the token cost the graph exists to save.
+- **With `.tsf/codemap.md`** (built from a Graphify graph before you start, for repos over about 50 KB of source): it lists each file's functions with line numbers, grouped by community (files that call each other), and the hub files many others use. Copy the plan's code map from it. Communities are your first draft of lanes; each hub file gets one owner lane or a scaffold commit. Open a file only for an exact signature or contract line the map lacks. On bench11 a Lead that had the graph but still read whole files used 119k tokens before starting builders, against 77k without the graph: rebuilding what the map already says is the cost it exists to save.
 - **Without it:** read the layout and the files the issues name.
 
 Then read every issue once: its acceptance and the files it implies. Write down, for each issue, the files it will create or change. Every later decision comes from that list.

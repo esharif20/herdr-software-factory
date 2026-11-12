@@ -50,9 +50,11 @@ The Lead has its own: grilling, domain-modeling and codebase-design while it pla
 
 Graphify turns a repo into a code graph and a short report, so the Lead could take its code map from the report instead of reading files. We build it before the Lead starts, with no tokens spent, so the Lead can't skip the step.
 
-On bench11 (161 KB of source), the graph made planning heavier, not lighter. The Lead had 119k tokens of context when it started the builders, against 77k without the graph, and cost $4.56 against $3.10. The run was faster (−45% against −36%), but that plan also put all four lanes on Opus, so the graph doesn't get the credit. Builders never used it; the plan's code map and grep were enough.
+On bench11 (161 KB of source), having the graph did not make planning lighter. The Lead had 119k tokens of context when it started the builders, against 77k without the graph, and cost $4.56 against $3.10. The report itself is only about 1k tokens. The extra came from the Lead reading whole source files anyway, about 50k characters of them, on top of the graph. The run was faster (−45% against −36%), but that plan also put all four lanes on Opus, so the graph doesn't get the credit.
 
-So the automatic build now starts at 400 KB of source, not 100 KB. Below that, reading the files the issues name is cheaper than reading the report. We have not yet measured a repo big enough for the report to win.
+So the graph now does the job the Lead was spending those tokens on. `codemap.mjs` turns `graph.json` into `.tsf/codemap.md`: each file's functions with line numbers, grouped by community, and the hub files that several communities use. On bench11 that is 7 KB, about 1.8k tokens, for 77 files. The Lead copies its code map from it, takes the communities as a first draft of lanes, and gives each hub file one owner. Builders read it instead of exploring. It is built before the Lead starts, for repos over 50 KB of source.
+
+CODEMAP_RESULT
 
 ## Install
 
