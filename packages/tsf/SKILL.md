@@ -73,8 +73,8 @@ Read the skills in group `always` once (their SKILL.md paths come from `skills.m
 ## 6. Other seats' skills
 
 When you start the UI Polisher or the Researcher, list SKILL.md paths in their brief (from `skills.mjs installed`).
-- **UI Polisher:** groups `ui-proof` and `polish`, plus `frontend`.
-- **Researcher:** usually none. Add the stack's group when the question is about that stack, and `design-taste-frontend` for a frontend review.
+- **UI Polisher:** its seat already reads group `ui-polish` (better-ui, better-layout, interface-review) and impeccable. Add `ui-proof` when the change needs stress tests, and `polish` or `motion` for new interactions or animation.
+- **Researcher:** usually none. Add the stack's group when the question is about that stack. For a frontend review it reads `design-taste-frontend` and `better-interface` itself.
 - **You, while discussing with the person:** group `lead` (grilling, domain-modeling, codebase-design, new-feature) shapes the questions, GLOSSARY.md and ADRs.
 - **Research:** domain knowledge, ADRs, prior art and frontend reviews go to a research subagent (Sonnet) or the Researcher seat, with findings in `.tsf/research/<topic>.md`. Your context stays for planning.
 - **Reviews:** the review subagent applies the Standards and Spec axes of `code-review`, without starting its own sub-agents.

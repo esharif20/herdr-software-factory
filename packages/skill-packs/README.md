@@ -21,6 +21,8 @@ An existing skill with the same name moves to `~/.herdr-software-factory/backups
 | impeccable | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | Apache-2.0 | `frontend` group |
 | ui-ux-pro-max | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | MIT | `frontend` group |
 | stripe-best-practices, upgrade-stripe | [stripe/ai](https://github.com/stripe/ai) | MIT | `money` group |
+| better-ui, better-layout, interface-review | [jakubkrehel/skills](https://github.com/jakubkrehel/skills) | MIT | `ui-polish` group, read by the UI Polisher on every change |
+| better-interface | [jakubkrehel/skills](https://github.com/jakubkrehel/skills) | MIT | the Researcher's frontend reviews: one ranked report |
 | design-md (library) | [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | MIT | `frontend` group: 84 DESIGN.md files to take tokens from |
 
 The three rstack skills with no licence are downloaded by your install from the author's public repo. Check the repo's terms before you use them in commercial work.
